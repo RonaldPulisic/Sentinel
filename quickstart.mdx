@@ -1,11 +1,11 @@
----
+  ---
   title: "Quickstart"
   description: "From zero to your first scan in a couple of minutes."
   ---
 
   Sentinel has two parts. Start with the **web console** to sign in and explore,
-  then install
-  the **desktop app** when you want to actually run tools and terminals locally.
+  then install the **desktop app** when you want to run tools and terminals
+  locally.
 
   ## Prerequisites
 
@@ -13,105 +13,59 @@
   - A Google account, a GitHub account, or any email address (for email +
   password sign-up).
   - **For running tools locally:** a Linux machine (Kali/Parrot/Ubuntu
-  recommended) or Windows,
-    and the desktop app.
+  recommended) or Windows, plus the desktop app.
   - **For local AI (optional):** [Ollama](https://ollama.com) installed and
   running.
 
   ## Sign in to the web console
 
-  <Steps>
-    <Step title="Open Sentinel">
-      Go to your Sentinel URL and choose **Get Started**.
-    </Step>
-    <Step title="Create an account">
-      Continue with **Google**, **GitHub**, or sign up with an **email +
-  password**.
-      Email/password accounts receive a verification link — open it, then
+  1. Open Sentinel and choose **Get Started**.
+  2. Continue with **Google**, **GitHub**, or sign up with an **email and
+  password**. Email/password accounts get a verification link — open it, then
   reload.
-    </Step>
-    <Step title="Explore the console">
-      You land on the dashboard. From the sidebar you can reach **Tools**,
-  **Cheat sheets**,
-      **Threat intel**, **Learn**, and **Settings**. Press
-  <kbd>Ctrl</kbd>/<kbd>⌘</kbd> +
-      <kbd>K</kbd> anywhere to search.
-    </Step>
-  </Steps>
+  3. You land on the dashboard. Use the sidebar to reach **Tools**, **Cheat
+  sheets**, **Threat intel**, **Learn**, and **Settings**. Press `Ctrl` / `⌘` +
+  `K` anywhere to search.
 
-  <Tip>
-    The web console is great for references and in-browser utilities, but it
-  can't run tools on
-    your machine — that's what the desktop app is for.
-  </Tip>
+  The web console is great for references and in-browser utilities, but it can't
+  run tools on your machine — that's what the desktop app is for.
 
   ## Install the desktop app
 
-  <Tabs>
-    <Tab title="Linux (.deb)">
-      Recommended for Debian, Ubuntu, and Kali.
+  ### Linux (.deb — recommended for Debian, Ubuntu, Kali)
 
-      ```bash
-      sudo apt install ./Sentinel-linux.deb
-      ```
+  ```bash
+  sudo apt install ./Sentinel-linux.deb
 
-      Then launch **Sentinel** from your application menu, or run `sentinel` in
-  a terminal.
-    </Tab>
-    <Tab title="Linux (AppImage)">
-      Portable — works on any distro.
+  Then launch Sentinel from your app menu, or run sentinel.
 
-      ```bash
-      chmod +x Sentinel-linux.AppImage
-      ./Sentinel-linux.AppImage
-      ```
+  Linux (AppImage — any distro)
 
-      The AppImage needs FUSE: `sudo apt install libfuse2` (or run it with
-      `--appimage-extract-and-run`).
-    </Tab>
-    <Tab title="Windows">
-      Double-click **Sentinel-windows.exe**. If SmartScreen warns, choose
-      **More info → Run anyway** (the installer is unsigned).
-    </Tab>
-  </Tabs>
+  chmod +x Sentinel-linux.AppImage
+  ./Sentinel-linux.AppImage
 
-  ## Run your first scan
+  The AppImage needs FUSE: sudo apt install libfuse2 (or run it with
+  --appimage-extract-and-run).
 
-  <Steps>
-    <Step title="Set a target">
-      In the desktop app, type an IP or domain into the **TARGET** bar at the
-  top. Every tool
-      command substitutes it automatically.
-    </Step>
-    <Step title="Pick a tool or playbook">
-      Open **Tools** and expand one (e.g. Nmap), or open **Playbooks** and run
-  **Quick recon**
-      to chain several scans in one terminal tab.
-    </Step>
-    <Step title="Read (and save) the output">
-      Output streams into an interactive terminal. Turn on **Save output** in
-  Settings to log
-      every run to `~/sentinel-results`, then browse them under **Loot**.
-    </Step>
-  </Steps>
+  Windows
 
-  <Warning>
-    Only scan targets you are authorized to test. See [Responsible
-  use](/responsible-use).
-  </Warning>
+  Double-click Sentinel-windows.exe. If SmartScreen warns, choose More info → 
+  Run anyway (the installer is unsigned).
 
-  ## Where to next
+  Run your first scan
 
-  <CardGroup cols={2}>
-    <Card title="Web console" icon="browser" href="/web-console">
-      Tour the browser experience.
-    </Card>
-    <Card title="Desktop app" icon="desktop" href="/desktop-app">
-      Every section of the native console.
-    </Card>
-    <Card title="Code workbench" icon="code" href="/workbench">
-      Edit, run code, and use the AI assistant.
-    </Card>
-    <Card title="Local AI" icon="microchip" href="/local-ai">
-      Wire up Ollama models.
-    </Card>
+  1. In the desktop app, type an IP or domain into the TARGET bar at the top —
+  every tool command substitutes it automatically.
+  2. Open Tools and expand one (e.g. Nmap), or open Playbooks and run Quick 
+  recon to chain several scans in one terminal tab.
+  3. Output streams into an interactive terminal. Turn on Save output in
+  Settings to log every run to ~/sentinel-results, then browse them under Loot.
+
+  ▎ Only scan targets you are authorized to test. See Responsible use.
+
+  Where to next
+
+  - Web console — tour the browser experience.
+  - Desktop app — every section of the native console.
+  - Code workbench — edit, run code, and use the AI assistant.
+  - Local AI — wire up Ollama models.
