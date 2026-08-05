@@ -1,47 +1,117 @@
 ---
-title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
----
+  title: "Quickstart"
+  description: "From zero to your first scan in a couple of minutes."
+  ---
 
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
+  Sentinel has two parts. Start with the **web console** to sign in and explore,
+  then install
+  the **desktop app** when you want to actually run tools and terminals locally.
 
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
+  ## Prerequisites
 
-## Prerequisites
+  - A modern browser (Chrome, Edge, Firefox, or Safari).
+  - A Google account, a GitHub account, or any email address (for email +
+  password sign-up).
+  - **For running tools locally:** a Linux machine (Kali/Parrot/Ubuntu
+  recommended) or Windows,
+    and the desktop app.
+  - **For local AI (optional):** [Ollama](https://ollama.com) installed and
+  running.
 
-Before you begin, you must have:
+  ## Sign in to the web console
 
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
+  <Steps>
+    <Step title="Open Sentinel">
+      Go to your Sentinel URL and choose **Get Started**.
+    </Step>
+    <Step title="Create an account">
+      Continue with **Google**, **GitHub**, or sign up with an **email +
+  password**.
+      Email/password accounts receive a verification link — open it, then
+  reload.
+    </Step>
+    <Step title="Explore the console">
+      You land on the dashboard. From the sidebar you can reach **Tools**,
+  **Cheat sheets**,
+      **Threat intel**, **Learn**, and **Settings**. Press
+  <kbd>Ctrl</kbd>/<kbd>⌘</kbd> +
+      <kbd>K</kbd> anywhere to search.
+    </Step>
+  </Steps>
 
-## Get started
+  <Tip>
+    The web console is great for references and in-browser utilities, but it
+  can't run tools on
+    your machine — that's what the desktop app is for.
+  </Tip>
 
-<Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
+  ## Install the desktop app
 
-    ```bash
-    npm install your-package
-    ```
-  </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
+  <Tabs>
+    <Tab title="Linux (.deb)">
+      Recommended for Debian, Ubuntu, and Kali.
 
-    ```bash
-    your-cli init
-    ```
-  </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
+      ```bash
+      sudo apt install ./Sentinel-linux.deb
+      ```
 
-    ```bash
-    your-cli start
-    ```
-  </Step>
-</Steps>
+      Then launch **Sentinel** from your application menu, or run `sentinel` in
+  a terminal.
+    </Tab>
+    <Tab title="Linux (AppImage)">
+      Portable — works on any distro.
 
-<Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
+      ```bash
+      chmod +x Sentinel-linux.AppImage
+      ./Sentinel-linux.AppImage
+      ```
 
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
-</Tip>
+      The AppImage needs FUSE: `sudo apt install libfuse2` (or run it with
+      `--appimage-extract-and-run`).
+    </Tab>
+    <Tab title="Windows">
+      Double-click **Sentinel-windows.exe**. If SmartScreen warns, choose
+      **More info → Run anyway** (the installer is unsigned).
+    </Tab>
+  </Tabs>
+
+  ## Run your first scan
+
+  <Steps>
+    <Step title="Set a target">
+      In the desktop app, type an IP or domain into the **TARGET** bar at the
+  top. Every tool
+      command substitutes it automatically.
+    </Step>
+    <Step title="Pick a tool or playbook">
+      Open **Tools** and expand one (e.g. Nmap), or open **Playbooks** and run
+  **Quick recon**
+      to chain several scans in one terminal tab.
+    </Step>
+    <Step title="Read (and save) the output">
+      Output streams into an interactive terminal. Turn on **Save output** in
+  Settings to log
+      every run to `~/sentinel-results`, then browse them under **Loot**.
+    </Step>
+  </Steps>
+
+  <Warning>
+    Only scan targets you are authorized to test. See [Responsible
+  use](/responsible-use).
+  </Warning>
+
+  ## Where to next
+
+  <CardGroup cols={2}>
+    <Card title="Web console" icon="browser" href="/web-console">
+      Tour the browser experience.
+    </Card>
+    <Card title="Desktop app" icon="desktop" href="/desktop-app">
+      Every section of the native console.
+    </Card>
+    <Card title="Code workbench" icon="code" href="/workbench">
+      Edit, run code, and use the AI assistant.
+    </Card>
+    <Card title="Local AI" icon="microchip" href="/local-ai">
+      Wire up Ollama models.
+    </Card>
