@@ -1,66 +1,52 @@
-  Sentinel has two parts. Start with the **web console** to sign in and explore,
-  then install the **desktop app** when you want to run tools and terminals
-  locally.
+---
+title: "Quickstart"
+description: "Sign in to the Sentinel web console, install the desktop app, and run your first scan."
+---
 
-  ## Prerequisites
+Sentinel has two parts. Start with the **web console** to sign in and explore, then install the **desktop app** when you want to run tools and terminals locally.
 
-  - A modern browser (Chrome, Edge, Firefox, or Safari).
-  - A Google account, a GitHub account, or any email address (for email +
-  password sign-up).
-  - **For running tools locally:** a Linux machine (Kali/Parrot/Ubuntu
-  recommended) or Windows, plus the desktop app.
-  - **For local AI (optional):** [Ollama](https://ollama.com) installed and
-  running.
+## Prerequisites
 
-  ## Sign in to the web console
+- A modern browser (Chrome, Edge, Firefox, or Safari).
+- A Google account, a GitHub account, or any email address (for email and password sign-up).
+- **For running tools locally:** a Linux machine (Kali, Parrot, or Ubuntu recommended) or Windows, plus the desktop app.
+- **For local AI (optional):** [Ollama](https://ollama.com) installed and running.
 
-  1. Open Sentinel and choose **Get Started**.
-  2. Continue with **Google**, **GitHub**, or sign up with an **email and
-  password**. Email/password accounts get a verification link — open it, then
-  reload.
-  3. You land on the dashboard. Use the sidebar to reach **Tools**, **Cheat
-  sheets**, **Threat intel**, **Learn**, and **Settings**. Press `Ctrl` / `⌘` +
-  `K` anywhere to search.
+## Sign in to the web console
 
-  The web console is great for references and in-browser utilities, but it can't
-  run tools on your machine — that's what the desktop app is for.
+1. Open Sentinel and choose **Get Started**.
+2. Continue with **Google**, **GitHub**, or sign up with an **email and password**. Email and password accounts get a verification link. Open it, then reload.
+3. You land on the dashboard. Use the sidebar to reach **Tools**, **Cheat sheets**, **Threat intel**, **Learn**, and **Settings**. Press `Ctrl` / `⌘` + `K` anywhere to search.
 
-  ## Install the desktop app
+The web console is great for references and in-browser utilities, but it can't run tools on your machine. That's what the desktop app is for.
 
-  ### Linux (.deb — recommended for Debian, Ubuntu, Kali)
+## Install the desktop app
 
-  ```bash
-  sudo apt install ./Sentinel-linux.deb
+### Linux (.deb, recommended for Debian, Ubuntu, Kali)
 
-  Then launch Sentinel from your app menu, or run sentinel.
+```bash
+sudo apt install ./Sentinel-linux.deb
+```
 
-  Linux (AppImage — any distro)
+Then launch Sentinel from your app menu, or run `sentinel`.
 
-  chmod +x Sentinel-linux.AppImage
-  ./Sentinel-linux.AppImage
+### Linux (AppImage, any distro)
 
-  The AppImage needs FUSE: sudo apt install libfuse2 (or run it with
-  --appimage-extract-and-run).
+```bash
+chmod +x Sentinel-linux.AppImage
+./Sentinel-linux.AppImage
+```
 
-  Windows
+The AppImage needs FUSE. Install it with `sudo apt install libfuse2`, or run the AppImage with `--appimage-extract-and-run`.
 
-  Double-click Sentinel-windows.exe. If SmartScreen warns, choose More info → 
-  Run anyway (the installer is unsigned).
+### Windows
 
-  Run your first scan
+Double-click `Sentinel-windows.exe`. If SmartScreen warns, choose **More info** → **Run anyway**. The installer is unsigned.
 
-  1. In the desktop app, type an IP or domain into the TARGET bar at the top —
-  every tool command substitutes it automatically.
-  2. Open Tools and expand one (e.g. Nmap), or open Playbooks and run Quick 
-  recon to chain several scans in one terminal tab.
-  3. Output streams into an interactive terminal. Turn on Save output in
-  Settings to log every run to ~/sentinel-results, then browse them under Loot.
+## Run your first scan
 
-  ▎ Only scan targets you are authorized to test. See Responsible use.
+1. In the desktop app, type an IP or domain into the **TARGET** bar at the top. Every tool command substitutes it automatically.
+2. Open **Tools** and expand one (for example, Nmap), or open **Playbooks** and run **Quick recon** to chain several scans in one terminal tab.
+3. Output streams into an interactive terminal. Turn on **Save output** in **Settings** to log every run to `~/sentinel-results`, then browse them under **Loot**.
 
-  Where to next
-
-  - Web console — tour the browser experience.
-  - Desktop app — every section of the native console.
-  - Code workbench — edit, run code, and use the AI assistant.
-  - Local AI — wire up Ollama models.
+> **Only scan targets you are authorized to test.**
