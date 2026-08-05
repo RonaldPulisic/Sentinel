@@ -1,66 +1,62 @@
-  Sentinel has two parts. Start with the **web console** to sign in and explore,
-  then install the **desktop app** when you want to run tools and terminals
-  locally.
+---
+  title: "Quickstart"
+  description: "From zero to your first scan in a couple of minutes."
+  ---
+
+  Sentinel has two parts. Start with the **web console** to sign in, then
+  install the **desktop app** to run tools locally.
 
   ## Prerequisites
 
   - A modern browser (Chrome, Edge, Firefox, or Safari).
-  - A Google account, a GitHub account, or any email address (for email +
-  password sign-up).
-  - **For running tools locally:** a Linux machine (Kali/Parrot/Ubuntu
-  recommended) or Windows, plus the desktop app.
+  - A Google account, a GitHub account, or any email address.
+  - **For running tools locally:** a Linux machine (Kali/Parrot/Ubuntu) or
+  Windows, plus the desktop app.
   - **For local AI (optional):** [Ollama](https://ollama.com) installed and
   running.
 
   ## Sign in to the web console
 
   1. Open Sentinel and choose **Get Started**.
-  2. Continue with **Google**, **GitHub**, or sign up with an **email and
-  password**. Email/password accounts get a verification link — open it, then
-  reload.
-  3. You land on the dashboard. Use the sidebar to reach **Tools**, **Cheat
-  sheets**, **Threat intel**, **Learn**, and **Settings**. Press `Ctrl` / `⌘` +
-  `K` anywhere to search.
-
-  The web console is great for references and in-browser utilities, but it can't
-  run tools on your machine — that's what the desktop app is for.
+  2. Continue with **Google**, **GitHub**, or an **email and password** (email
+  accounts get a verification link).
+  3. You land on the dashboard. Use the sidebar for **Tools**, **Cheat sheets**,
+  **Threat intel**, and **Settings**. Press `Ctrl` / `Cmd` + `K` to search.
 
   ## Install the desktop app
 
-  ### Linux (.deb — recommended for Debian, Ubuntu, Kali)
+  **Linux (.deb — Debian, Ubuntu, Kali):**
 
   ```bash
   sudo apt install ./Sentinel-linux.deb
 
   Then launch Sentinel from your app menu, or run sentinel.
 
-  Linux (AppImage — any distro)
+  Linux (AppImage — any distro):
 
   chmod +x Sentinel-linux.AppImage
   ./Sentinel-linux.AppImage
 
-  The AppImage needs FUSE: sudo apt install libfuse2 (or run it with
-  --appimage-extract-and-run).
+  The AppImage needs FUSE: sudo apt install libfuse2.
 
-  Windows
-
-  Double-click Sentinel-windows.exe. If SmartScreen warns, choose More info → 
-  Run anyway (the installer is unsigned).
+  Windows: double-click Sentinel-windows.exe. If SmartScreen warns, choose More 
+  info → Run anyway.
 
   Run your first scan
 
-  1. In the desktop app, type an IP or domain into the TARGET bar at the top —
-  every tool command substitutes it automatically.
+  1. Type an IP or domain into the TARGET bar — every tool command uses it
+  automatically.
   2. Open Tools and expand one (e.g. Nmap), or open Playbooks and run Quick 
-  recon to chain several scans in one terminal tab.
-  3. Output streams into an interactive terminal. Turn on Save output in
-  Settings to log every run to ~/sentinel-results, then browse them under Loot.
+  recon.
+  3. Output streams into a terminal. Turn on Save output in Settings to log runs
+  to ~/sentinel-results, then browse them under Loot.
 
-  ▎ Only scan targets you are authorized to test. See Responsible use.
+  ▎ Only scan targets you are authorized to test.
 
-  Where to next
-
-  - Web console — tour the browser experience.
-  - Desktop app — every section of the native console.
-  - Code workbench — edit, run code, and use the AI assistant.
-  - Local AI — wire up Ollama models.
+  ## Rules to avoid the 404 again
+  - **`docs.json` at the repo root**, and **delete `mint.json`** if it exists.
+  - Only **two files** referenced: `index.mdx` and `quickstart.mdx`, both at the
+  root. (I removed all links to pages you haven't created, so nothing 404s.)
+  - **Don't paste my explanations into the files** — only the content inside
+  each code block, starting at the first `---`.
+  - Commit, push, wait for Mintlify to rebuild, then open the link.
